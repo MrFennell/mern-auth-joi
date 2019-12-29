@@ -1,0 +1,9 @@
+//change file to .env and fill in variables
+
+PORT=
+NODE_ENV=
+MONGO_URI=
+
+SESS_NAME=
+SESS_SECRET=
+SESS_LIFETIME=
