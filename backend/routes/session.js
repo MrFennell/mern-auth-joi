@@ -5,6 +5,7 @@ import { signIn } from '../validations/user';
 import { parseError, sessionizeUser } from '../util/helpers';
 
 const sessionRouter = express.Router();
+
 const SESS_NAME = process.env.SESS_NAME;
 
 sessionRouter.post('', async (req, res) => {
@@ -15,8 +16,8 @@ sessionRouter.post('', async (req, res) => {
         const user = await User.findOne({ email });
         if (user && user.comparePasswords(password)){
             const sessionUser = sessionizeUser(user);
-
-            req.session.user = sessionUse
+            
+            req.session.user = sessionUser
             res.send(sessionUser);
         }else{
             throw new Error('Invalid login credentials');
