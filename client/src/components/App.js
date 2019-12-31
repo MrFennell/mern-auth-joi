@@ -1,5 +1,4 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
 import Welcome from './Welcome';
 import Login from './Login';
 import Signup from './Signup';
